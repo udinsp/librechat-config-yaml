@@ -188,7 +188,7 @@ endpoints:
     # together.ai
     # https://api.together.ai/settings/api-keys
     # Model list: https://docs.together.ai/docs/inference-models
-    - name: "together.ai"
+    - name: "Together AI"
       apiKey: "${TOGETHERAI_API_KEY}"
       baseURL: "https://api.together.xyz"
       models:
@@ -198,9 +198,9 @@ endpoints:
           - meta-llama/Llama-Vision-Free
         fetch: false
       titleConvo: true
-      titleModel: "togethercomputer/llama-2-7b-chat"
+      titleModel: "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free"
       summarize: false
-      summaryModel: "togethercomputer/llama-2-7b-chat"
+      summaryModel: "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free"
       forcePrompt: false
       modelDisplayLabel: "Together AI"
 
@@ -383,8 +383,8 @@ endpoints:
 
     # Exa
     - name: "Exa"
-      apiKey: "${EXA_API_KEY}"
-      baseURL: "https://api.exa.ai/v1"
+      apiKey: "${EXAAI_API_KEY}"
+      baseURL: "https://api.exa.ai"
       models:
         default:
           - exa
