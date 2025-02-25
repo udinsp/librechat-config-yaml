@@ -38,6 +38,7 @@ endpoints:
           - command-r7b-12-2024
         fetch: false
       modelDisplayLabel: "cohere"
+      titleConvo: true
       titleModel: "command"
       dropParams:
         - "stop"
