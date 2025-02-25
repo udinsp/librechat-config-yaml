@@ -52,6 +52,7 @@ endpoints:
     - name: "Exa"
       apiKey: "${EXA_API_KEY}"
       baseURL: "https://api.exa.ai"
+      iconURL: "https://media.theresanaiforthat.com/icons/exa.svg"
       models:
         default:
           - exa
@@ -59,7 +60,7 @@ endpoints:
         fetch: false
       modelDisplayLabel: "Exa"
       titleConvo: true
-      titleModel: "exa-pro"
+      titleModel: "exa"
       dropParams:
         - "stop"
         - "user"
@@ -210,6 +211,7 @@ endpoints:
     - name: "Together"
       apiKey: "${TOGETHERAI_API_KEY}"
       baseURL: "https://api.together.xyz"
+      iconURL: "https://registry.npmmirror.com/@lobehub/icons-static-png/1.24.0/files/dark/together-color.png"
       models:
         default:
           - deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free
