@@ -199,7 +199,7 @@ endpoints:
           - undi95/toppy-m-7b:free
         fetch: false
       titleConvo: true
-      titleModel: "google/gemini-2.0-flash-exp:free"
+      titleModel: "openchat/openchat-7b:free"
       summarize: false
       summaryModel: "google/gemini-2.0-flash-exp:free"
       forcePrompt: false
