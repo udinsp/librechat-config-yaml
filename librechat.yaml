@@ -23,7 +23,7 @@ endpoints:
 
     # cohere
     # Model list: https://dashboard.cohere.com/playground/chat
-    - name: "cohere"
+    - name: "Cohere"
       apiKey: "${COHERE_API_KEY}"
       baseURL: "https://api.cohere.ai/v1"
       models:
@@ -37,7 +37,7 @@ endpoints:
           - command-r-plus-08-2024
           - command-r7b-12-2024
         fetch: false
-      modelDisplayLabel: "cohere"
+      modelDisplayLabel: "Cohere"
       titleConvo: true
       titleModel: "command"
       dropParams:
@@ -48,9 +48,27 @@ endpoints:
         - "temperature"
         - "top_p"
 
+    # Exa
+    - name: "Exa"
+      apiKey: "${EXA_API_KEY}"
+      baseURL: "https://api.exa.ai"
+      models:
+        default:
+          - exa
+          - exa-pro
+        fetch: false
+      modelDisplayLabel: "Exa"
+      titleConvo: true
+      titleModel: "exa-pro"
+      dropParams:
+        - "stop"
+        - "user"
+        - "frequency_penalty"
+        - "presence_penalty"
+
     # groq
     # Model list: https://console.groq.com/settings/limits
-    - name: "groq"
+    - name: "Groq"
       apiKey: "${GROQ_API_KEY}"
       baseURL: "https://api.groq.com/openai/v1/"
       models:
@@ -74,7 +92,7 @@ endpoints:
         fetch: false
       titleConvo: true
       titleModel: "mixtral-8x7b-32768"
-      modelDisplayLabel: "groq"
+      modelDisplayLabel: "Groq"
 
     # Mistral AI API
     # Model list: https://docs.mistral.ai/getting-started/models/
@@ -189,7 +207,7 @@ endpoints:
     # together.ai
     # https://api.together.ai/settings/api-keys
     # Model list: https://docs.together.ai/docs/inference-models
-    - name: "Together AI"
+    - name: "Together"
       apiKey: "${TOGETHERAI_API_KEY}"
       baseURL: "https://api.together.xyz"
       models:
@@ -382,20 +400,3 @@ endpoints:
         - "frequency_penalty"
         - "presence_penalty"
 
-    # Exa
-    - name: "Exa"
-      apiKey: "${EXAAI_API_KEY}"
-      baseURL: "https://api.exa.ai"
-      models:
-        default:
-          - exa
-          - exa-pro
-        fetch: false
-      modelDisplayLabel: "Exa"
-      titleConvo: true
-      titleModel: "exa"
-      dropParams:
-        - "stop"
-        - "user"
-        - "frequency_penalty"
-        - "presence_penalty"
