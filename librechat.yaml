@@ -74,9 +74,78 @@ endpoints:
       iconURL: "https://i.postimg.cc/ZRJ53CPg/gpt4free.png"
       models:
         default:
-          - llama-3-7b
-          - llama-3.1-8b
+          - gpt-4
+          - gpt-4o
+          - gpt-4o-mini
+          - o1
+          - o1-preview
+          - o1-mini
+          - o3-mini
+          - meta-ai
+          - llama-2-7b
+          - llama-3-8b
           - llama-3-70b
+          - llama-3.1-8b
+          - llama-3.1-70b
+          - llama-3.1-405b
+          - llama-3.2-1b
+          - llama-3.2-3b
+          - llama-3.2-11b
+          - llama-3.2-90b
+          - llama-3.3-70b
+          - mixtral-8x7b
+          - mixtral-8x22b
+          - mistral-nemo
+          - mixtral-small-28b
+          - hermes-2-dpo
+          - phi-3.5-mini
+          - phi-4
+          - wizardlm-2-7b
+          - wizardlm-2-8x22b
+          - gemini
+          - gemini-exp
+          - gemini-1.5-pro
+          - gemini-1.5-flash
+          - gemini-2.0-flash
+          - gemini-2.0-flash-thinking
+          - claude-3-opus
+          - claude-3-sonnet
+          - claude-3-haiku
+          - claude-3.5-sonnet
+          - reka-core
+          - blackboxai
+          - blackboxai-pro
+          - command-r
+          - command-r-plus
+          - command-r7b
+          - GigaChat:latest
+          - qwen-1.5-7b
+          - qwen-2-72b
+          - qwen-2-vl-7b
+          - qwen-2.5-72b
+          - qwen-2.5-coder-32b
+          - qwen-2.5-1m-demo
+          - qwq-32b
+          - qvq-72b
+          - pi
+          - grok-2
+          - sonar
+          - sonar-pro
+          - sonar-reasoning
+          - sonar-reasoning-pro
+          - deepseek-chat
+          - deepseek-v3
+          - deepseek-r1
+          - nemotron-70b
+          - dbrx-instruct
+          - glm-4
+          - MiniMax
+          - yi-34b
+          - dolphin-2.6
+          - dolphin-2.9
+          - airoboros-70b
+          - lzlv-70b
+          - minicpm-2.5
         fetch: false
       modelDisplayLabel: "GPT4Free"
       titleConvo: true
