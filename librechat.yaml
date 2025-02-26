@@ -149,7 +149,7 @@ endpoints:
         fetch: false
       modelDisplayLabel: "GPT4Free"
       titleConvo: true
-      titleModel: "llama-3-7b"
+      titleModel: "llama-3.2-3b"
       dropParams:
         - "stop"
         - "user"
