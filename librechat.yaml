@@ -70,11 +70,12 @@ endpoints:
     # GPT4Free
     - name: "GPT4Free"
       apiKey: "gpt4free"
-      baseURL: "http://localhost:8080/v1"
+      baseURL: "http://0.0.0.0:8080/v1"
       iconURL: "https://i.postimg.cc/ZRJ53CPg/gpt4free.png"
       models:
         default:
           - llama-3-7b
+          - llama-3.1-8b
           - llama-3-70b
         fetch: false
       modelDisplayLabel: "GPT4Free"
