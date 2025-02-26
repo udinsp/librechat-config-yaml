@@ -70,7 +70,7 @@ endpoints:
     # GPT4Free
     - name: "GPT4Free"
       apiKey: "gpt4free"
-      baseURL: "http://0.0.0.0:8080/v1"
+      baseURL: "http://gpt4free:8080/v1"
       iconURL: "https://i.postimg.cc/ZRJ53CPg/gpt4free.png"
       models:
         default:
