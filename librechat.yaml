@@ -23,7 +23,7 @@ endpoints:
 
     # cohere
     # Model list: https://dashboard.cohere.com/playground/chat
-    - name: "cohere"
+    - name: "Cohere"
       apiKey: "${COHERE_API_KEY}"
       baseURL: "https://api.cohere.ai/v1"
       models:
@@ -39,7 +39,7 @@ endpoints:
           - command-r7b-12-2024
           - command-r7b-arabic-02-2025
         fetch: false
-      modelDisplayLabel: "cohere"
+      modelDisplayLabel: "Cohere"
       titleModel: "command"
       dropParams:
         - "stop"
