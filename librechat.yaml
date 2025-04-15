@@ -23,22 +23,23 @@ endpoints:
 
     # cohere
     # Model list: https://dashboard.cohere.com/playground/chat
-    - name: "Cohere"
+    - name: "cohere"
       apiKey: "${COHERE_API_KEY}"
       baseURL: "https://api.cohere.ai/v1"
       models:
         default:
           - c4ai-aya-expanse-32b
+          - c4ai-aya-vision-32b
           - command
+          - command-a-03-2025
           - command-light-nightly
+          - command-nightly
           - command-r
-          - command-r-08-2024
           - command-r-plus
-          - command-r-plus-08-2024
           - command-r7b-12-2024
+          - command-r7b-arabic-02-2025
         fetch: false
-      modelDisplayLabel: "Cohere"
-      titleConvo: true
+      modelDisplayLabel: "cohere"
       titleModel: "command"
       dropParams:
         - "stop"
@@ -163,22 +164,20 @@ endpoints:
       baseURL: "https://api.groq.com/openai/v1/"
       models:
         default:
+          - allam-2-7b
           - deepseek-r1-distill-llama-70b
-          - deepseek-r1-distill-qwen-32b
           - gemma2-9b-it
           - llama-3.1-8b-instant
-          - llama-3.2-11b-vision-preview
-          - llama-3.2-1b-preview
-          - llama-3.2-3b-preview
-          - llama-3.2-90b-vision-preview
-          - llama-3.3-70b-specdec
           - llama-3.3-70b-versatile
           - llama-guard-3-8b
           - llama3-70b-8192
           - llama3-8b-8192
-          - mixtral-8x7b-32768
-          - qwen-2.5-32b
-          - qwen-2.5-coder-32b
+          - meta-llama/llama-4-maverick-17b-128e-instruct
+          - meta-llama/llama-4-scout-17b-16e-instruct
+          - mistral-saba-24b
+          - playai-tts
+          - playai-tts-arabic
+          - qwen-qwq-32b
         fetch: false
       titleConvo: true
       titleModel: "mixtral-8x7b-32768"
@@ -213,6 +212,8 @@ endpoints:
           - mistral-medium-latest
           - mistral-moderation-2411
           - mistral-moderation-latest
+          - mistral-ocr-2503
+          - mistral-ocr-latest
           - mistral-saba-2502
           - mistral-saba-latest
           - mistral-small
@@ -220,6 +221,7 @@ endpoints:
           - mistral-small-2402
           - mistral-small-2409
           - mistral-small-2501
+          - mistral-small-2503
           - mistral-small-latest
           - mistral-tiny
           - mistral-tiny-2312
@@ -255,37 +257,63 @@ endpoints:
       baseURL: "https://openrouter.ai/api/v1"
       models:
         default:
+          - agentica-org/deepcoder-14b-preview:free
+          - allenai/molmo-7b-d:free
+          - arliai/qwq-32b-arliai-rpr-v1:free
+          - bytedance-research/ui-tars-72b:free
           - cognitivecomputations/dolphin3.0-mistral-24b:free
           - cognitivecomputations/dolphin3.0-r1-mistral-24b:free
+          - deepseek/deepseek-chat-v3-0324:free
           - deepseek/deepseek-chat:free
           - deepseek/deepseek-r1-distill-llama-70b:free
+          - deepseek/deepseek-r1-distill-qwen-14b:free
+          - deepseek/deepseek-r1-distill-qwen-32b:free
+          - deepseek/deepseek-r1-zero:free
           - deepseek/deepseek-r1:free
+          - deepseek/deepseek-v3-base:free
+          - featherless/qwerky-72b:free
           - google/gemini-2.0-flash-exp:free
-          - google/gemini-2.0-flash-lite-preview-02-05:free
           - google/gemini-2.0-flash-thinking-exp-1219:free
           - google/gemini-2.0-flash-thinking-exp:free
-          - google/gemini-2.0-pro-exp-02-05:free
-          - google/gemini-exp-1206:free
+          - google/gemini-2.5-pro-exp-03-25:free
           - google/gemma-2-9b-it:free
+          - google/gemma-3-12b-it:free
+          - google/gemma-3-1b-it:free
+          - google/gemma-3-27b-it:free
+          - google/gemma-3-4b-it:free
           - google/learnlm-1.5-pro-experimental:free
-          - gryphe/mythomax-l2-13b:free
           - huggingfaceh4/zephyr-7b-beta:free
-          - meta-llama/llama-3-8b-instruct:free
           - meta-llama/llama-3.1-8b-instruct:free
           - meta-llama/llama-3.2-11b-vision-instruct:free
           - meta-llama/llama-3.2-1b-instruct:free
+          - meta-llama/llama-3.2-3b-instruct:free
           - meta-llama/llama-3.3-70b-instruct:free
-          - microsoft/phi-3-medium-128k-instruct:free
-          - microsoft/phi-3-mini-128k-instruct:free
+          - meta-llama/llama-4-maverick:free
+          - meta-llama/llama-4-scout:free
           - mistralai/mistral-7b-instruct:free
           - mistralai/mistral-nemo:free
           - mistralai/mistral-small-24b-instruct-2501:free
+          - mistralai/mistral-small-3.1-24b-instruct:free
+          - moonshotai/kimi-vl-a3b-thinking:free
+          - moonshotai/moonlight-16b-a3b-instruct:free
+          - nousresearch/deephermes-3-llama-3-8b-preview:free
           - nvidia/llama-3.1-nemotron-70b-instruct:free
-          - openchat/openchat-7b:free
-          - qwen/qwen-vl-plus:free
+          - nvidia/llama-3.1-nemotron-nano-8b-v1:free
+          - nvidia/llama-3.1-nemotron-ultra-253b-v1:free
+          - nvidia/llama-3.3-nemotron-super-49b-v1:free
+          - open-r1/olympiccoder-32b:free
+          - open-r1/olympiccoder-7b:free
+          - qwen/qwen-2.5-72b-instruct:free
+          - qwen/qwen-2.5-7b-instruct:free
+          - qwen/qwen-2.5-coder-32b-instruct:free
+          - qwen/qwen-2.5-vl-7b-instruct:free
+          - qwen/qwen2.5-vl-32b-instruct:free
+          - qwen/qwen2.5-vl-3b-instruct:free
           - qwen/qwen2.5-vl-72b-instruct:free
+          - qwen/qwq-32b-preview:free
+          - qwen/qwq-32b:free
+          - rekaai/reka-flash-3:free
           - sophosympatheia/rogue-rose-103b-v0.2:free
-          - undi95/toppy-m-7b:free
         fetch: false
       titleConvo: true
       titleModel: "openchat/openchat-7b:free"
@@ -330,7 +358,6 @@ endpoints:
           - claude-3-opus@vertex-ai
           - claude-3-sonnet@anthropic
           - claude-3-sonnet@aws-bedrock
-          - claude-3-sonnet@vertex-ai
           - claude-3.5-haiku@anthropic
           - claude-3.5-haiku@aws-bedrock
           - claude-3.5-haiku@replicate
@@ -342,19 +369,24 @@ endpoints:
           - claude-3.5-sonnet@aws-bedrock
           - claude-3.5-sonnet@replicate
           - claude-3.5-sonnet@vertex-ai
+          - claude-3.7-sonnet@anthropic
+          - claude-3.7-sonnet@aws-bedrock
+          - claude-3.7-sonnet@replicate
+          - claude-3.7-sonnet@vertex-ai
           - command-r-plus@aws-bedrock
+          - deepseek-r1@aws-bedrock
           - deepseek-r1@deepinfra
           - deepseek-r1@deepseek
           - deepseek-r1@fireworks-ai
           - deepseek-r1@replicate
           - deepseek-r1@together-ai
+          - deepseek-v3-0324@deepinfra
+          - deepseek-v3-0324@fireworks-ai
           - deepseek-v3@deepinfra
           - deepseek-v3@deepseek
           - deepseek-v3@fireworks-ai
+          - deepseek-v3@replicate
           - deepseek-v3@together-ai
-          - gemini-1.0-pro-001@vertex-ai
-          - gemini-1.0-pro-002@vertex-ai
-          - gemini-1.0-pro@vertex-ai
           - gemini-1.5-flash-001@vertex-ai
           - gemini-1.5-flash-002@vertex-ai
           - gemini-1.5-flash@vertex-ai
@@ -363,36 +395,39 @@ endpoints:
           - gemini-1.5-pro@vertex-ai
           - gemini-2.0-flash-lite@vertex-ai
           - gemini-2.0-flash@vertex-ai
-          - gemma-2-27b-it@deepinfra
+          - gemini-2.5-pro@vertex-ai
           - gemma-2-27b-it@together-ai
-          - gemma-2-9b-it@deepinfra
           - gemma-2-9b-it@groq
           - gemma-2-9b-it@lepton-ai
-          - gemma-2-9b-it@together-ai
+          - gemma-3-12b-it@deepinfra
+          - gemma-3-27b-it@deepinfra
+          - gemma-3-4b-it@deepinfra
           - gpt-3.5-turbo@openai
           - gpt-4-turbo@openai
+          - gpt-4.5-preview@openai
           - gpt-4@openai
           - gpt-4o-2024-05-13@openai
           - gpt-4o-2024-08-06@openai
           - gpt-4o-2024-11-20@openai
+          - gpt-4o-mini-search-preview@openai
           - gpt-4o-mini@openai
+          - gpt-4o-search-preview@openai
           - gpt-4o@openai
           - grok-2-vision@xai
           - grok-2@xai
+          - grok-3-beta@xai
+          - grok-3-fast-beta@xai
+          - grok-3-mini-beta@xai
+          - grok-3-mini-fast-beta@xai
           - llama-3-70b-chat@aws-bedrock
           - llama-3-70b-chat@deepinfra
           - llama-3-70b-chat@fireworks-ai
           - llama-3-70b-chat@groq
-          - llama-3-70b-chat@lepton-ai
           - llama-3-70b-chat@replicate
-          - llama-3-70b-chat@together-ai
           - llama-3-8b-chat@aws-bedrock
           - llama-3-8b-chat@deepinfra
-          - llama-3-8b-chat@fireworks-ai
           - llama-3-8b-chat@groq
-          - llama-3-8b-chat@lepton-ai
           - llama-3-8b-chat@replicate
-          - llama-3-8b-chat@together-ai
           - llama-3.1-405b-chat@aws-bedrock
           - llama-3.1-405b-chat@deepinfra
           - llama-3.1-405b-chat@fireworks-ai
@@ -402,7 +437,6 @@ endpoints:
           - llama-3.1-70b-chat@aws-bedrock
           - llama-3.1-70b-chat@deepinfra
           - llama-3.1-70b-chat@fireworks-ai
-          - llama-3.1-70b-chat@lepton-ai
           - llama-3.1-70b-chat@together-ai
           - llama-3.1-70b-chat@vertex-ai
           - llama-3.1-8b-chat@aws-bedrock
@@ -414,23 +448,16 @@ endpoints:
           - llama-3.1-8b-chat@vertex-ai
           - llama-3.1-nemotron-70b-chat@deepinfra
           - llama-3.2-11b-chat@deepinfra
-          - llama-3.2-11b-chat@fireworks-ai
-          - llama-3.2-11b-chat@groq
           - llama-3.2-11b-chat@together-ai
           - llama-3.2-11b-chat@vertex-ai
           - llama-3.2-1b-chat@aws-bedrock
           - llama-3.2-1b-chat@deepinfra
-          - llama-3.2-1b-chat@groq
           - llama-3.2-1b-chat@lepton-ai
           - llama-3.2-3b-chat@aws-bedrock
           - llama-3.2-3b-chat@deepinfra
-          - llama-3.2-3b-chat@fireworks-ai
-          - llama-3.2-3b-chat@groq
           - llama-3.2-3b-chat@lepton-ai
           - llama-3.2-3b-chat@together-ai
           - llama-3.2-90b-chat@deepinfra
-          - llama-3.2-90b-chat@fireworks-ai
-          - llama-3.2-90b-chat@groq
           - llama-3.2-90b-chat@together-ai
           - llama-3.2-90b-chat@vertex-ai
           - llama-3.3-70b-chat@aws-bedrock
@@ -439,14 +466,21 @@ endpoints:
           - llama-3.3-70b-chat@groq
           - llama-3.3-70b-chat@lepton-ai
           - llama-3.3-70b-chat@together-ai
+          - llama-4-maverick-instruct@deepinfra
+          - llama-4-maverick-instruct@fireworks-ai
+          - llama-4-maverick-instruct@groq
+          - llama-4-maverick-instruct@replicate
+          - llama-4-maverick-instruct@together-ai
+          - llama-4-scout-instruct@deepinfra
+          - llama-4-scout-instruct@fireworks-ai
+          - llama-4-scout-instruct@groq
+          - llama-4-scout-instruct@replicate
+          - llama-4-scout-instruct@together-ai
           - ministral-3b@mistral-ai
           - ministral-8b@mistral-ai
-          - mistral-7b-instruct-v0.2@aws-bedrock
           - mistral-7b-instruct-v0.3@deepinfra
           - mistral-7b-instruct-v0.3@lepton-ai
-          - mistral-7b-instruct-v0.3@mistral-ai
           - mistral-7b-instruct-v0.3@together-ai
-          - mistral-large@aws-bedrock
           - mistral-large@mistral-ai
           - mistral-large@vertex-ai
           - mistral-nemo@deepinfra
@@ -454,21 +488,14 @@ endpoints:
           - mistral-nemo@mistral-ai
           - mistral-nemo@vertex-ai
           - mistral-small@deepinfra
-          - mistral-small@fireworks-ai
           - mistral-small@mistral-ai
           - mistral-small@together-ai
           - mixtral-8x22b-instruct-v0.1@fireworks-ai
-          - mixtral-8x22b-instruct-v0.1@mistral-ai
-          - mixtral-8x22b-instruct-v0.1@together-ai
-          - mixtral-8x7b-instruct-v0.1@aws-bedrock
           - mixtral-8x7b-instruct-v0.1@deepinfra
-          - mixtral-8x7b-instruct-v0.1@fireworks-ai
-          - mixtral-8x7b-instruct-v0.1@groq
           - mixtral-8x7b-instruct-v0.1@lepton-ai
-          - mixtral-8x7b-instruct-v0.1@mistral-ai
-          - mixtral-8x7b-instruct-v0.1@replicate
           - mixtral-8x7b-instruct-v0.1@together-ai
           - o1-mini@openai
+          - o1-pro@openai
           - o1@openai
           - o3-mini@openai
           - qwen-2-72b-instruct@together-ai
@@ -478,12 +505,13 @@ endpoints:
           - qwen-2.5-7b-instruct@deepinfra
           - qwen-2.5-7b-instruct@together-ai
           - qwen-2.5-coder-32b-instruct@deepinfra
-          - qwen-2.5-coder-32b-instruct@fireworks-ai
-          - qwen-2.5-coder-32b-instruct@groq
           - qwen-2.5-coder-32b-instruct@together-ai
-          - qwen-qwq-32b-preview@fireworks-ai
-          - qwen-qwq-32b-preview@together-ai
+          - qwen-qwq-32b@deepinfra
+          - qwen-qwq-32b@fireworks-ai
+          - qwen-qwq-32b@groq
+          - qwen-qwq-32b@together-ai
         fetch: false
+      titleConvo: true
       titleModel: "gpt-4o-mini@openai"
       dropParams:
         - "stop"
